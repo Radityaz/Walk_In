@@ -50,7 +50,114 @@ class description extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.87,
         child: SingleChildScrollView(child: Column(children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.50,),
-          Container(height: MediaQuery.of(context).size.height, color: Color(0xFF242A38),),
+          Container(height: MediaQuery.of(context).size.height * 1.10, color: Color(0xFF242A38),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 10,),
+              Row(children: [
+                Align(
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.10,
+                    child: Row(
+                      children: [
+                        Container(margin: EdgeInsets.only(left: 10), width: MediaQuery.of(context).size.width * 0.75, alignment: Alignment.centerLeft, child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(Tour.name[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+                            Text(Tour.location[id],style: TextStyle(color: Colors.white))
+                          ],
+                        ),
+                        ),
+                        Container( width: MediaQuery.of(context).size.width * 0.15, alignment: Alignment.center, child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(height: 40,width: 40,color: Colors.white,),
+                            SizedBox(height: 5),
+                            Text(Tour.temperature[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
+                          ],
+                        ))
+                      ],
+                    ),
+                  ),
+                )
+              ]),
+              Container( margin: EdgeInsets.only(left: 10,right: 10,bottom: 10), child: Divider(color: Colors.white, thickness: 2, )),
+              Container(margin: EdgeInsets.only(left: 10,right: 10,bottom: 10), child: Text("About " + Tour.name[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18))),
+              Container(margin: EdgeInsets.only(left: 10,right: 10,bottom: 10), child: Text("About " + Tour.description[id],style: TextStyle(color: Colors.white,fontSize: 12),maxLines: 9)),
+
+              Container( margin: EdgeInsets.only(left: 10,right: 10,bottom: 10), child: Divider(color: Colors.white, thickness: 2, )),
+              Container(margin: EdgeInsets.only(left: 10,right: 10,bottom: 10), child: Text(Tour.name[id] + " Review",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18))),
+              Container( width: MediaQuery.of(context).size.width ,height: MediaQuery.of(context).size.height * 0.50 , child: Column(
+                children: [
+                    Container(height: MediaQuery.of(context).size.height * 0.125, child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center, children: [
+                        Container(alignment: Alignment.center, width: MediaQuery.of(context).size.width * 0.30, child: Text("Review",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
+                        Container(height: 60 ,width: MediaQuery.of(context).size.width * 0.01, color: Colors.white,),
+                        Container( margin: EdgeInsets.only(left: 10), width: MediaQuery.of(context).size.width * 0.65, child: Column(
+                          children: [
+                            Container( alignment: Alignment.bottomLeft, height: MediaQuery.of(context).size.height * 0.062, child: Text("Overwelming Positif",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),),
+                            Container( alignment: Alignment.topCenter, height: MediaQuery.of(context).size.height * 0.062, child: Row(children: [
+                              Container(color: Colors.black, height: 20, width: 20,),
+                              SizedBox(width: 5,),
+                              Text(Tour.review[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
+                            ],),),
+                          ],
+                        ),)
+                      ],
+
+                    ),
+                    ),
+                                        Container(height: MediaQuery.of(context).size.height * 0.125, child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center, children: [
+                        Container(alignment: Alignment.center, width: MediaQuery.of(context).size.width * 0.30, child: Text("Service",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
+                        Container(height: 60 ,width: MediaQuery.of(context).size.width * 0.01, color: Colors.white,),
+                        Container( margin: EdgeInsets.only(left: 10), width: MediaQuery.of(context).size.width * 0.65, child: Column(
+                          children: [
+                            Container( alignment: Alignment.bottomLeft, height: MediaQuery.of(context).size.height * 0.062, child: Text("Overwelming Positif",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),),
+                            Container(alignment: Alignment.topCenter, height: MediaQuery.of(context).size.height * 0.062, child: Row(children: [
+                              Container(color: Colors.black, height: 20, width: 20,),
+                              SizedBox(width: 5,),
+                              Text(Tour.service[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
+                            ],),),
+                          ],
+                        ),)
+                      ],
+
+                    ),
+                    ),
+                                        Container(height: MediaQuery.of(context).size.height * 0.125, child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center, children: [
+                        Container(alignment: Alignment.center, width: MediaQuery.of(context).size.width * 0.30, child: Text("Sanity",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),),
+                        Container(height: 60 ,width: MediaQuery.of(context).size.width * 0.01, color: Colors.white,),
+                        Container( margin: EdgeInsets.only(left: 10), width: MediaQuery.of(context).size.width * 0.65, child: Column(
+                          children: [
+                            Container( alignment: Alignment.bottomLeft, height: MediaQuery.of(context).size.height * 0.062, child: Text("Overwelming Positif",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),),
+                            Container(alignment: Alignment.topCenter, height: MediaQuery.of(context).size.height * 0.062, child: Row(children: [
+                              Container(color: Colors.black, height: 20, width: 20,),
+                              SizedBox(width: 5,),
+                              Text(Tour.sanity[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
+                            ],),),
+                          ],
+                        ),)
+                      ],
+
+                    ),
+                    ),
+                                        Container(height: MediaQuery.of(context).size.height * 0.125, child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center, children: [
+                        Container(alignment: Alignment.center, width: MediaQuery.of(context).size.width * 0.30, child: Text(Tour.visitor[id],style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 35),),),
+                        SizedBox(width: 16,),
+                        Container(width: MediaQuery.of(context).size.width * 0.65, child: Text("Visitor Happy and Satisfy after visiting this place",maxLines: 2,style: TextStyle(color: Colors.white),))
+                      ],
+
+                    ),
+                    ),
+                ],
+              ),)
+            ],
+          ), ),
         ],),),
       )
       ]),

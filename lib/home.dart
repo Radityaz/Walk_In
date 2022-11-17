@@ -18,11 +18,9 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Color(0xFF242A38),
-        appBar: AppBar( backgroundColor: Color(0xFF242A38) ,title: Text("WALK IN"),),
+        appBar: AppBar( backgroundColor: Color(0xFF242A38) ,title: Text("WALK IN"), automaticallyImplyLeading: false,),
         body: Container(
           // margin: EdgeInsets.all(15),
           child: SingleChildScrollView(
@@ -196,7 +194,11 @@ class _homeState extends State<home> {
                                Container(
                 height: MediaQuery.of(context).size.height * 0.30, width: MediaQuery.of(context).size.width * 1 ,child: 
                 ListView.builder(scrollDirection: Axis.horizontal ,itemCount: 5, itemBuilder: (context, index) => Row(children: [
-                  InkWell(child: Row(children: [
+                  InkWell(
+                    onTap: (() {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> description(id: index + 10)));
+                    }),
+                    child: Row(children: [
                     SizedBox(width: 12.5,),
                     Container(width: 140, height: MediaQuery.of(context).size.height * 0.50, color: Color(0xFF171B23),child: Column(
                       children: [
@@ -229,23 +231,7 @@ class _homeState extends State<home> {
             ]),
           ),
         ),
-        bottomNavigationBar:  BottomNavigationBar(
-        backgroundColor: Color(0xFF171B23),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home,),
-            label: "home"
-          ),
-                    BottomNavigationBarItem(
-            icon: Icon(Icons.compass_calibration_rounded),
-            label: "Explore"
-          ),
-                    BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Favorite"
-          ),
-        ]),
-    ));
+    );
   }
 }
 
