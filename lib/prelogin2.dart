@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:walk_in/home.dart';
 import 'package:walk_in/homescreen.dart';
+import 'package:walk_in/login.dart';
 
 class prelogin2 extends StatefulWidget {
   const prelogin2({super.key});
@@ -65,7 +66,7 @@ class _prelogin2State extends State<prelogin2> {
                     child: ElevatedButton(
                         onPressed: (() {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => homescreen()));
+                              MaterialPageRoute(builder: (context) => LoginPage()));
                         }),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,

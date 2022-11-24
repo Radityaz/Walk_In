@@ -17,24 +17,32 @@ class _homescreenState extends State<homescreen> {
   int currentIndex = 0;
   final Screens = [
     home(),
-    search()
+    search(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    
         body: Screens[currentIndex],
         bottomNavigationBar:  BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         backgroundColor: Color(0xFF171B23),
+        unselectedIconTheme: IconThemeData(color: Colors.white),
+        unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home,),
-            label: "home"
+            label: "home",
+
           ),
-                    BottomNavigationBarItem(
+            BottomNavigationBarItem(
             icon: Icon(Icons.compass_calibration_rounded),
             label: "Explore"
+          ),
+            BottomNavigationBarItem(
+            icon: Icon(Icons.people_alt_rounded),
+            label: "User"
           ),
         ])
     );
