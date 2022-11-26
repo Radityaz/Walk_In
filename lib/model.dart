@@ -106,25 +106,25 @@ class Tour {
 
   static final List<String> weather = [
      //Beach
-     "sunnycloudy.jpg",
-     "sunnycloudy.jpg",
-     "sunnycloudy.jpg",
-     "cloudy.jpg",
-     "cloudy.jpg",
+     "images/sunnycloudy.jpg",
+     "images/sunnycloudy.jpg",
+     "images/sunnycloudy.jpg",
+     "images/cloudy.jpg",
+     "images/cloudy.jpg",
 
      //Monument
-      "cloudy.jpg",
-      "cloudy.jpg",
-      "sunnycloudy.jpg",
-      "cloudy.jpg",
-      "raining.jpg",
+      "images/cloudy.jpg",
+      "images/cloudy.jpg",
+      "images/sunnycloudy.jpg",
+      "images/cloudy.jpg",
+      "images/raining.jpg",
 
       //Mountain
-      "raining.jpg",
-      "cloudy.jpg",
-      "cloudy.jpg",
-      "cloudy.jpg",
-      "cloudy.jpg"
+      "images/raining.jpg",
+      "images/cloudy.jpg",
+      "images/cloudy.jpg",
+      "images/cloudy.jpg",
+      "images/cloudy.jpg"
   ];
 
   static final List<String> temperature = [

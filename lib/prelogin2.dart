@@ -65,7 +65,7 @@ class _prelogin2State extends State<prelogin2> {
                     height: 50,
                     child: ElevatedButton(
                         onPressed: (() {
-                          Navigator.push(context,
+                          Navigator.pushReplacement(context,
                               MaterialPageRoute(builder: (context) => LoginPage()));
                         }),
                         child: Row(

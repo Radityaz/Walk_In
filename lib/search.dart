@@ -18,8 +18,8 @@ class _searchState extends State<search> {
       backgroundColor: Color(0xFF242A38),
        appBar: AppBar( backgroundColor: Color(0xFF242A38) ,title: Text("WALK IN"), automaticallyImplyLeading: false,),
       body: Column(children: [
-        Container( margin: EdgeInsets.all(10), width: MediaQuery.of(context).size.width,color: Colors.white, height: 30, ),
-        Container(margin: EdgeInsets.only(left: 10,right: 10),  height: MediaQuery.of(context).size.height * 0.70,
+
+        Container(margin: EdgeInsets.only(left: 10,right: 10),  height: MediaQuery.of(context).size.height * 0.76,
           child: ListView.builder( scrollDirection: Axis.vertical, itemCount: Tour.id.length, itemBuilder: (context, index) => 
           Align(
             child: Container( margin: EdgeInsets.only(top: 15), height: MediaQuery.of(context).size.height * 0.15, color: Color(0xFF171B23),child: Row(children: [
@@ -36,7 +36,7 @@ class _searchState extends State<search> {
                   
                   height: 40,
                   width: 40,
-                  color: Colors.white,
+                  child: Image.asset("images/button.png"),
                   ),
               ),
             ]),),
